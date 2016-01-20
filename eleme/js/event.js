@@ -36,4 +36,14 @@ var Else={
 		else
 			return getComputedStyle(obj,false)[attr];	
 	},
+	getClassObj:function(parent,className){
+    	var obj=parent.getElementsByTagName('*');//获取 父级的所有子集
+    	var pinS=[];//创建一个数组 用于收集子元素
+    	for (var i=0;i<obj.length;i++) {//遍历子元素、判断类别、压入数组
+       		if (obj[i].className==className){
+           		pinS.push(obj[i]);
+        	}
+    	};
+    	return pinS;
+	},
 }

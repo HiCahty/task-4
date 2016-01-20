@@ -34,7 +34,13 @@ a{
 	border-left:6px solid transparent;
 	border-right:6px solid transparent;
 }
-
+.delta-line{
+	width: 10px;
+	height: 10px;
+	border-top:1px solid #e6e6e6;
+	border-left: 1px solid #e6e6e6;
+	transform:rotate(-45deg);
+}
 
 //变量定义
 $wrapper-width:80%;
@@ -261,6 +267,124 @@ $wrapper-width:80%;
 	}
 }
 
+.menu-scroll{
+	background-color: #fff;
+	z-index: 3;
+	width: 80%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	background-color: #f5f5f5;
+	font-size: 13px;
+	border: {
+		bottom: 1px solid #e6e6e6;
+		left: 1px solid #e6e6e6;
+		right:1px solid #e6e6e6;
+	}
+	span{
+		float: left;
+		height: 40px;
+		line-height: 40px;
+		vertical-align: 35%;
+		display: inline-block;
+		padding: 0 10px 0 10px;
+		a{
+			font-size: 14px;
+			color: #0089dc;
+		}
+	}
+	ul{
+		float: left;
+		padding-right: 10px;
+		li{
+			padding: 0 8px 0 8px;
+			float: left;
+			a{
+				height: 40px;
+				line-height: 40px;
+				color:#666;	
+			}
+		}
+		#Mchoose1 .choFrom{width: 87px;left: 0px;}
+		#Mchoose2 .choFrom{width: 130px;left: 0px;}
+		#Mchoose1,#Mchoose2{
+			position: relative;
+			.choFrom{
+				font-size: 13px;
+				z-index: 3;
+				display: none;
+				border-bottom: 1px solid #e6e6e6;
+				border-left: 1px solid #e6e6e6;
+				border-right: 1px solid #e6e6e6;
+				background-color: #fff;
+				position: absolute;
+				top: 0;
+				span{
+					font-size: 13px;
+					padding:0 6px;
+					height:auto; 
+					display: block;
+					font-size: 13px;
+					text-align: center;
+				}
+				.a-list{
+					margin-left: 10px;
+					float: left;
+					a{
+						height: 28px;
+						line-height: 28px;
+						height: auto;
+						display: block;	
+						text-align: center;
+						&:hover{
+							color: #0089dc;
+						}
+					}
+				}
+			}
+		}
+	}
+	.check4{
+		float: left;
+		margin: 6px 10px 4px 0;
+		padding: 4px 0 4px 0;
+		border-left: 1px solid #e6e6e6;
+		label{
+			margin:0 3px 0 3px;
+		}
+	}
+	.search{
+		margin-right: 2px;
+		margin-top: 5px;
+		border: 1px solid #ccc;
+		float: right;
+		form{
+			display: inline-block;
+			input{
+				width: 220px;
+				border: none;
+				outline: none;
+				font-size: 13px;
+				line-height: 13px;
+				padding-left: 5px;
+			}
+		}
+		a{
+			color:#999;
+			margin-right: 5px;
+			font-size: 18px;
+			&:hover{color:#0089dc}
+		}	
+	}
+}
+
+
+
+//主体部分
 .wrapper{
 	width: $wrapper-width;
 	margin: 0 auto;
@@ -312,11 +436,19 @@ $wrapper-width:80%;
 		}
 	}
 
-	img{
+	.ad{
 		width: 100%
 	}
 
 	.mer-classificatin{
+		position: relative;
+		.girl{
+			position: absolute;
+			right: 0;
+			top: -5px;
+			width: 175px;
+			height: 50px;
+		}
 		.classifi{
 			a:first-child{
 				color:#0089dc;
@@ -363,11 +495,11 @@ $wrapper-width:80%;
 			background-color: #f5f5f5;
 			font-size: 13px;
 			border: {
-				bottom: 1px solid #999;
-				left: 1px solid #999;
-				right:1px solid #999;
+				bottom: 1px solid #e6e6e6;
+				left: 1px solid #e6e6e6;
+				right:1px solid #e6e6e6;
 			}
-			span{
+			.span-title{
 				float: left;
 				height: 40px;
 				line-height: 40px;
@@ -388,6 +520,41 @@ $wrapper-width:80%;
 						height: 40px;
 						line-height: 40px;
 						color:#666;	
+					}
+				}
+				#choose1 .choFrom{width: 85px;left: -4px;}
+				#choose2 .choFrom{width: 115px;left: 0;}
+				#choose1,#choose2{
+					position: relative;
+					.choFrom{
+						z-index: 3;
+						display: none;
+						border-bottom: 1px solid #e6e6e6;
+						border-left: 1px solid #e6e6e6;
+						border-right: 1px solid #e6e6e6;
+						background-color: #fff;
+						position: absolute;
+						top: 0;
+						span{
+							height:auto; 
+							display: block;
+							font-size: 13px;
+							text-align: center;
+						}
+						.a-list{
+							margin-left: 10px;
+							float: left;
+							a{
+								height: 28px;
+								line-height: 28px;
+								height: auto;
+								display: block;	
+								text-align: center;
+								&:hover{
+									color: #0089dc;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -424,11 +591,138 @@ $wrapper-width:80%;
 			}
 		}
 	}
+
+	.merchant-wrapper{
+		border: 1px solid #e6e6e6;
+    	border-bottom: 0;
+   		margin-top: 20px;
+   		.merchant{
+   			cursor: pointer;
+   			&:hover{
+   				background-color: #F5F5F5;
+   				.mer-abso{
+   					display: block;
+   				}
+   			}
+   			h3{
+   				font-size: 14px;
+    			margin-bottom: 6px;
+   	 			font-weight: 600;
+    			overflow: hidden;
+    			white-space: nowrap;
+    			text-overflow: ellipsis;
+   			}
+   			position: relative;
+   			float: left;
+   			width: 25%;
+   			border-bottom: 1px #f5f5f5 solid;
+   			.merchant-content{
+   				position: relative;
+   				padding: 20px;
+   				span{
+   					font-size:13px;
+					color:#999;
+   				}
+   				.mer-image{
+   					float: left;
+   					padding-right: 20px;
+					span{
+						display: block;
+					}
+   				}
+   				.merchant-text{
+   					float: left;
+   					.icon-star{
+   						position: relative;
+   						font-size: 13px;
+   						color:#999;
+   						.icon-star-on{
+   							color: yellow;
+   							position: absolute;
+   							top: 0;
+   						}	
+   					}
+   					.merchant-ab{
+   						position: absolute;
+   						top:48px;
+   						right: 20px;
+   					}
+   					.icon-square{
+   						font-size: 12px;
+   						margin-top: 9px;
+   						i{
+   							color: #fff;
+   							font-weight: 700;
+   							display: inline-block;
+   							font-style:normal;
+   							margin-right: 3px;
+   							line-height: 16px;
+   							text-align: center;
+   							width: 18px;
+   							border-radius:2px;
+   						}
+   					}
+   				}
+   			}
+   		}
+   		.mer-abso{
+   			display: none;
+   			z-index: 2;
+   			background-color: #fff;
+   			position: absolute;
+			right: -265px;
+			top: 0;
+			.delta{
+				transform:rotate(-90deg);
+				position: absolute;
+				left: -11px;
+				top: 30px;
+				border-bottom-color: #fff;
+			}
+			.delta-line{
+				position: absolute;
+				left: -7px;
+				top: 30px;
+			}
+			.abso-text{
+				width: 261px;
+				border: 1px solid #e6e6e6;
+				.abso-content{
+					padding: 10px;
+					h3{
+						display: block;
+						border-bottom: 1px solid #e6e6e6;
+						padding-bottom: 15px;
+						padding-top: 8px;
+					}
+					p{
+						font-size: 14px;
+						line-height: 18px;
+						display: block;
+						margin-bottom: 10px;
+					}
+					i{
+						display: inline-block;
+						color: #fff;
+						font-weight: 700;
+						font-style:normal;
+   						font-size: 12px;
+   						margin-right: 3px;
+   						line-height: 16px;
+   						text-align: center;
+   						width: 18px;
+   						border-radius:2px;
+   					}
+				}
+			}
+   		}
+	}
 }
 
 
 //foot
 .foot{
+	overflow: hidden;
 	background-color: #f7f7f7;
 	margin-top: 50px;
 	border-top: 1px solid #eee;

@@ -36,6 +36,13 @@ a {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent; }
 
+.delta-line {
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  transform: rotate(-45deg); }
+
 .menu-right {
   background-color: #504d53;
   width: 32px;
@@ -218,6 +225,106 @@ a {
         font-size: 20px;
         margin-right: 10px; }
 
+.menu-scroll {
+  background-color: #fff;
+  z-index: 3;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background-color: #f5f5f5;
+  font-size: 13px;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6; }
+  .menu-scroll span {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: 35%;
+    display: inline-block;
+    padding: 0 10px 0 10px; }
+    .menu-scroll span a {
+      font-size: 14px;
+      color: #0089dc; }
+  .menu-scroll ul {
+    float: left;
+    padding-right: 10px; }
+    .menu-scroll ul li {
+      padding: 0 8px 0 8px;
+      float: left; }
+      .menu-scroll ul li a {
+        height: 40px;
+        line-height: 40px;
+        color: #666; }
+    .menu-scroll ul #Mchoose1 .choFrom {
+      width: 87px;
+      left: 0px; }
+    .menu-scroll ul #Mchoose2 .choFrom {
+      width: 130px;
+      left: 0px; }
+    .menu-scroll ul #Mchoose1, .menu-scroll ul #Mchoose2 {
+      position: relative; }
+      .menu-scroll ul #Mchoose1 .choFrom, .menu-scroll ul #Mchoose2 .choFrom {
+        font-size: 13px;
+        z-index: 3;
+        display: none;
+        border-bottom: 1px solid #e6e6e6;
+        border-left: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+        background-color: #fff;
+        position: absolute;
+        top: 0; }
+        .menu-scroll ul #Mchoose1 .choFrom span, .menu-scroll ul #Mchoose2 .choFrom span {
+          font-size: 13px;
+          padding: 0 6px;
+          height: auto;
+          display: block;
+          font-size: 13px;
+          text-align: center; }
+        .menu-scroll ul #Mchoose1 .choFrom .a-list, .menu-scroll ul #Mchoose2 .choFrom .a-list {
+          margin-left: 10px;
+          float: left; }
+          .menu-scroll ul #Mchoose1 .choFrom .a-list a, .menu-scroll ul #Mchoose2 .choFrom .a-list a {
+            height: 28px;
+            line-height: 28px;
+            height: auto;
+            display: block;
+            text-align: center; }
+            .menu-scroll ul #Mchoose1 .choFrom .a-list a:hover, .menu-scroll ul #Mchoose2 .choFrom .a-list a:hover {
+              color: #0089dc; }
+  .menu-scroll .check4 {
+    float: left;
+    margin: 6px 10px 4px 0;
+    padding: 4px 0 4px 0;
+    border-left: 1px solid #e6e6e6; }
+    .menu-scroll .check4 label {
+      margin: 0 3px 0 3px; }
+  .menu-scroll .search {
+    margin-right: 2px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    float: right; }
+    .menu-scroll .search form {
+      display: inline-block; }
+      .menu-scroll .search form input {
+        width: 220px;
+        border: none;
+        outline: none;
+        font-size: 13px;
+        line-height: 13px;
+        padding-left: 5px; }
+    .menu-scroll .search a {
+      color: #999;
+      margin-right: 5px;
+      font-size: 18px; }
+      .menu-scroll .search a:hover {
+        color: #0089dc; }
+
 .wrapper {
   width: 80%;
   margin: 0 auto; }
@@ -257,91 +364,235 @@ a {
         font-size: 18px; }
         .wrapper .now-loca .search a:hover {
           color: #0089dc; }
-  .wrapper img {
+  .wrapper .ad {
     width: 100%; }
-  .wrapper .mer-classificatin .classifi a:first-child {
-    color: #0089dc;
-    border-bottom: 2px solid #0089dc; }
-  .wrapper .mer-classificatin .classifi a {
-    text-align: center;
-    display: inline-block;
-    width: 100px;
-    line-height: 40px;
-    height: 40px;
-    margin-bottom: -2px;
-    color: #000; }
-  .wrapper .mer-classificatin .classifi-content {
-    padding: 10px 0 10px 0;
-    font-size: 13px;
-    border-top: 2px solid #999;
-    border-left: 1px solid #999;
-    border-right: 1px solid #999; }
-    .wrapper .mer-classificatin .classifi-content span {
-      font-size: 14px;
-      color: #999;
-      vertical-align: 40%;
+  .wrapper .mer-classificatin {
+    position: relative; }
+    .wrapper .mer-classificatin .girl {
+      position: absolute;
+      right: 0;
+      top: -5px;
+      width: 175px;
+      height: 50px; }
+    .wrapper .mer-classificatin .classifi a:first-child {
+      color: #0089dc;
+      border-bottom: 2px solid #0089dc; }
+    .wrapper .mer-classificatin .classifi a {
+      text-align: center;
       display: inline-block;
-      padding: 0 10px 0 10px; }
-    .wrapper .mer-classificatin .classifi-content ul {
-      display: inline-block; }
-      .wrapper .mer-classificatin .classifi-content ul li {
-        float: left;
-        padding: 5px 10px 5px 10px;
-        margin: 0 6px 0 6px; }
-        .wrapper .mer-classificatin .classifi-content ul li a {
-          color: #666; }
-  .wrapper .mer-classificatin .classifi-order {
-    background-color: #f5f5f5;
-    font-size: 13px;
-    border-bottom: 1px solid #999;
-    border-left: 1px solid #999;
-    border-right: 1px solid #999; }
-    .wrapper .mer-classificatin .classifi-order span {
-      float: left;
+      width: 100px;
+      line-height: 40px;
       height: 40px;
-      line-height: 40px;
-      vertical-align: 35%;
-      display: inline-block;
-      padding: 0 10px 0 10px; }
-      .wrapper .mer-classificatin .classifi-order span a {
+      margin-bottom: -2px;
+      color: #000; }
+    .wrapper .mer-classificatin .classifi-content {
+      padding: 10px 0 10px 0;
+      font-size: 13px;
+      border-top: 2px solid #999;
+      border-left: 1px solid #999;
+      border-right: 1px solid #999; }
+      .wrapper .mer-classificatin .classifi-content span {
         font-size: 14px;
-        color: #0089dc; }
-    .wrapper .mer-classificatin .classifi-order ul {
-      float: left; }
-      .wrapper .mer-classificatin .classifi-order ul li {
-        padding: 0 7px 0 7px;
-        float: left; }
-        .wrapper .mer-classificatin .classifi-order ul li a {
-          height: 40px;
-          line-height: 40px;
-          color: #666; }
-    .wrapper .mer-classificatin .classifi-order form {
-      float: right;
-      margin: 6px 10px 4px 0;
-      padding: 4px 0 4px 0;
-      border-left: 1px solid #e6e6e6; }
-      .wrapper .mer-classificatin .classifi-order form label {
-        margin: 0 3px 0 3px; }
-  .wrapper .mer-classificatin .around-title {
-    margin-top: 10px;
-    line-height: 40px;
-    padding: 0 10px;
-    background-color: #fffdee;
-    border: 1px solid #ffe4b9; }
-    .wrapper .mer-classificatin .around-title p {
-      color: #333;
-      line-height: 40px;
-      font-size: 14px; }
-      .wrapper .mer-classificatin .around-title p span {
+        color: #999;
+        vertical-align: 40%;
         display: inline-block;
-        color: #f63;
-        font-size: 20px;
-        font-weight: 400;
-        padding: 0 3px; }
-      .wrapper .mer-classificatin .around-title p a {
-        color: #0089dc; }
+        padding: 0 10px 0 10px; }
+      .wrapper .mer-classificatin .classifi-content ul {
+        display: inline-block; }
+        .wrapper .mer-classificatin .classifi-content ul li {
+          float: left;
+          padding: 5px 10px 5px 10px;
+          margin: 0 6px 0 6px; }
+          .wrapper .mer-classificatin .classifi-content ul li a {
+            color: #666; }
+    .wrapper .mer-classificatin .classifi-order {
+      background-color: #f5f5f5;
+      font-size: 13px;
+      border-bottom: 1px solid #e6e6e6;
+      border-left: 1px solid #e6e6e6;
+      border-right: 1px solid #e6e6e6; }
+      .wrapper .mer-classificatin .classifi-order .span-title {
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: 35%;
+        display: inline-block;
+        padding: 0 10px 0 10px; }
+        .wrapper .mer-classificatin .classifi-order .span-title a {
+          font-size: 14px;
+          color: #0089dc; }
+      .wrapper .mer-classificatin .classifi-order ul {
+        float: left; }
+        .wrapper .mer-classificatin .classifi-order ul li {
+          padding: 0 7px 0 7px;
+          float: left; }
+          .wrapper .mer-classificatin .classifi-order ul li a {
+            height: 40px;
+            line-height: 40px;
+            color: #666; }
+        .wrapper .mer-classificatin .classifi-order ul #choose1 .choFrom {
+          width: 85px;
+          left: -4px; }
+        .wrapper .mer-classificatin .classifi-order ul #choose2 .choFrom {
+          width: 115px;
+          left: 0; }
+        .wrapper .mer-classificatin .classifi-order ul #choose1, .wrapper .mer-classificatin .classifi-order ul #choose2 {
+          position: relative; }
+          .wrapper .mer-classificatin .classifi-order ul #choose1 .choFrom, .wrapper .mer-classificatin .classifi-order ul #choose2 .choFrom {
+            z-index: 3;
+            display: none;
+            border-bottom: 1px solid #e6e6e6;
+            border-left: 1px solid #e6e6e6;
+            border-right: 1px solid #e6e6e6;
+            background-color: #fff;
+            position: absolute;
+            top: 0; }
+            .wrapper .mer-classificatin .classifi-order ul #choose1 .choFrom span, .wrapper .mer-classificatin .classifi-order ul #choose2 .choFrom span {
+              height: auto;
+              display: block;
+              font-size: 13px;
+              text-align: center; }
+            .wrapper .mer-classificatin .classifi-order ul #choose1 .choFrom .a-list, .wrapper .mer-classificatin .classifi-order ul #choose2 .choFrom .a-list {
+              margin-left: 10px;
+              float: left; }
+              .wrapper .mer-classificatin .classifi-order ul #choose1 .choFrom .a-list a, .wrapper .mer-classificatin .classifi-order ul #choose2 .choFrom .a-list a {
+                height: 28px;
+                line-height: 28px;
+                height: auto;
+                display: block;
+                text-align: center; }
+                .wrapper .mer-classificatin .classifi-order ul #choose1 .choFrom .a-list a:hover, .wrapper .mer-classificatin .classifi-order ul #choose2 .choFrom .a-list a:hover {
+                  color: #0089dc; }
+      .wrapper .mer-classificatin .classifi-order form {
+        float: right;
+        margin: 6px 10px 4px 0;
+        padding: 4px 0 4px 0;
+        border-left: 1px solid #e6e6e6; }
+        .wrapper .mer-classificatin .classifi-order form label {
+          margin: 0 3px 0 3px; }
+    .wrapper .mer-classificatin .around-title {
+      margin-top: 10px;
+      line-height: 40px;
+      padding: 0 10px;
+      background-color: #fffdee;
+      border: 1px solid #ffe4b9; }
+      .wrapper .mer-classificatin .around-title p {
+        color: #333;
+        line-height: 40px;
+        font-size: 14px; }
+        .wrapper .mer-classificatin .around-title p span {
+          display: inline-block;
+          color: #f63;
+          font-size: 20px;
+          font-weight: 400;
+          padding: 0 3px; }
+        .wrapper .mer-classificatin .around-title p a {
+          color: #0089dc; }
+  .wrapper .merchant-wrapper {
+    border: 1px solid #e6e6e6;
+    border-bottom: 0;
+    margin-top: 20px; }
+    .wrapper .merchant-wrapper .merchant {
+      cursor: pointer;
+      position: relative;
+      float: left;
+      width: 25%;
+      border-bottom: 1px #f5f5f5 solid; }
+      .wrapper .merchant-wrapper .merchant:hover {
+        background-color: #F5F5F5; }
+        .wrapper .merchant-wrapper .merchant:hover .mer-abso {
+          display: block; }
+      .wrapper .merchant-wrapper .merchant h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+        font-weight: 600;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+      .wrapper .merchant-wrapper .merchant .merchant-content {
+        position: relative;
+        padding: 20px; }
+        .wrapper .merchant-wrapper .merchant .merchant-content span {
+          font-size: 13px;
+          color: #999; }
+        .wrapper .merchant-wrapper .merchant .merchant-content .mer-image {
+          float: left;
+          padding-right: 20px; }
+          .wrapper .merchant-wrapper .merchant .merchant-content .mer-image span {
+            display: block; }
+        .wrapper .merchant-wrapper .merchant .merchant-content .merchant-text {
+          float: left; }
+          .wrapper .merchant-wrapper .merchant .merchant-content .merchant-text .icon-star {
+            position: relative;
+            font-size: 13px;
+            color: #999; }
+            .wrapper .merchant-wrapper .merchant .merchant-content .merchant-text .icon-star .icon-star-on {
+              color: yellow;
+              position: absolute;
+              top: 0; }
+          .wrapper .merchant-wrapper .merchant .merchant-content .merchant-text .merchant-ab {
+            position: absolute;
+            top: 48px;
+            right: 20px; }
+          .wrapper .merchant-wrapper .merchant .merchant-content .merchant-text .icon-square {
+            font-size: 12px;
+            margin-top: 9px; }
+            .wrapper .merchant-wrapper .merchant .merchant-content .merchant-text .icon-square i {
+              color: #fff;
+              font-weight: 700;
+              display: inline-block;
+              font-style: normal;
+              margin-right: 3px;
+              line-height: 16px;
+              text-align: center;
+              width: 18px;
+              border-radius: 2px; }
+    .wrapper .merchant-wrapper .mer-abso {
+      display: none;
+      z-index: 2;
+      background-color: #fff;
+      position: absolute;
+      right: -265px;
+      top: 0; }
+      .wrapper .merchant-wrapper .mer-abso .delta {
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -11px;
+        top: 30px;
+        border-bottom-color: #fff; }
+      .wrapper .merchant-wrapper .mer-abso .delta-line {
+        position: absolute;
+        left: -7px;
+        top: 30px; }
+      .wrapper .merchant-wrapper .mer-abso .abso-text {
+        width: 261px;
+        border: 1px solid #e6e6e6; }
+        .wrapper .merchant-wrapper .mer-abso .abso-text .abso-content {
+          padding: 10px; }
+          .wrapper .merchant-wrapper .mer-abso .abso-text .abso-content h3 {
+            display: block;
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 15px;
+            padding-top: 8px; }
+          .wrapper .merchant-wrapper .mer-abso .abso-text .abso-content p {
+            font-size: 14px;
+            line-height: 18px;
+            display: block;
+            margin-bottom: 10px; }
+          .wrapper .merchant-wrapper .mer-abso .abso-text .abso-content i {
+            display: inline-block;
+            color: #fff;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 12px;
+            margin-right: 3px;
+            line-height: 16px;
+            text-align: center;
+            width: 18px;
+            border-radius: 2px; }
 
 .foot {
+  overflow: hidden;
   background-color: #f7f7f7;
   margin-top: 50px;
   border-top: 1px solid #eee; }

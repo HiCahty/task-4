@@ -82,6 +82,51 @@
 		</div>
 	</nav>
 
+	<nav class="menu-scroll" id="menuscroll">
+		<span><a href="">默认排序</a></span>
+		<ul>
+			<li><a href="">销量好</a></li>
+			<li><a href="">评价高</a></li>
+			<li id="Mchoose1"><a href="">其它排序<i class="fa fa-chevron-down"></i></a>
+				<div class="choFrom" id="MchoFrom1">
+					<span><a href="">其它排序<i class="fa fa-chevron-up"></i></a></span>
+					<div class="a-list">
+						<a href="">距离最近</a>
+						<a href="">配送速度</a>
+						<a href="">起送金额</a>
+					</div>
+				</div>
+			</li>
+			<li id="Mchoose2"><a href="">起送价格：不限<i class="fa fa-chevron-down"></i></a>
+				<div class="choFrom" id="MchoFrom2">
+					<span><a href="">起送价格：不限<i class="fa fa-chevron-up"></i></a></span>
+					<div class="a-list">
+						<a href="" style="color:#0089dc">不限</a>
+						<a href="">15元以下</a>
+						<a href="">20元以下</a>
+						<a href="">30元以下</a>
+						<a href="">40元以下</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<form action="" class="check4">
+			<label for=""><input type="checkbox"/>新开商家</label>
+			<label for=""><input type="checkbox"/>免费配送</label>
+			<label for=""><input type="checkbox"/>饿配送</label>
+			<label for=""><input type="checkbox"/>可开发票</label>
+			<label for=""><input type="checkbox"/>在线支付</label>
+		</form>
+		<div class="search">
+			<form action="">
+				<input  type="text" placeholder="搜索商家，美食...">
+			</form>
+			<a href=""><i class="fa fa-search-plus"></i></a>
+		</div>	
+		<div class="clear"></div>	 	
+	</nav>
+
+
 	<!--主体部分-->
 	<div class="wrapper">
 		<div class="now-loca">
@@ -99,9 +144,10 @@
 			<div class="clear"></div>	 		
 		</div>
 
-		<img src="images/else/ad.jpg" alt="advertise">
+		<img src="images/else/ad.jpg" alt="advertise" class="ad">
 
 		<div class="mer-classificatin">
+			<img src="images/else/girl.png" alt="" class="girl">
 			<div class="classifi">
 				<a href="">外面商家</a>
 				<a href="">附近的团购</a>
@@ -121,12 +167,31 @@
 				</ul>
 			</div>
 			<div class="classifi-order">
-				<span><a href="">默认排序</a></span>
+				<span class="span-title"><a href="">默认排序</a></span>
 				<ul>
 					<li><a href="">销量好</a></li>
 					<li><a href="">评价高</a></li>
-					<li><a href="">其它排序<i class="fa fa-chevron-down"></i></a></li>
-					<li><a href="">起送价格：不限<i class="fa fa-chevron-down"></i></a></li>
+					<li id="choose1"><a href="">其它排序<i class="fa fa-chevron-down"></i></a>
+						<div class="choFrom" id="choFrom1">
+							<span><a href="">其它排序<i class="fa fa-chevron-up"></i></a></span>
+							<div class="a-list">
+								<a href="">距离最近</a>
+								<a href="">配送速度</a>
+								<a href="">起送金额</a>
+							</div>
+						</div>
+					</li>
+					<li id="choose2"><a href="">起送价格：不限<i class="fa fa-chevron-down"></i></a>
+						<div class="choFrom" id="choFrom2">
+							<span><a href="">起送价格：不限<i class="fa fa-chevron-up"></i></a></span>
+							<div class="a-list">
+								<a href="" style="color:#0089dc">不限</a>
+								<a href="">15元以下</a>
+								<a href="">20元以下</a>
+								<a href="">30元以下</a>
+								<a href="">40元以下</a>
+							</div>
+					</li>
 				</ul>
 				<form action="">
 					<label for=""><input type="checkbox"/>新开商家</label>
@@ -141,6 +206,480 @@
 				<p>想吃好吃的，看看附近<span>19</span><span>家</span>品牌商家吧，<a href="">立即查看</a></p>
 			</div>
 		</div>
+
+		<div class="merchant-wrapper" id="merwrap">
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text"> 
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p class="p1"><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p class="p2"><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p class="p3"><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p class="p4"><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>	
+			</div>	
+
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="merchant">
+				<div class="merchant-content">
+					<div class="mer-image">
+						<img src="images/merchant/ayi.png" alt="">
+						<span>40分钟</span>
+					</div>
+					<div class="merchant-text">
+						<h3>阿姨奶茶</h3>
+						<div class="icon-star">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<div class="icon-star-on">
+								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
+							</div>
+						</div>
+						<span class="merchant-ab">月售111单</span>
+						<span>10元起送/免费配送</span>
+						<div class="icon-square">
+							<i style="background-color:#f4a937">专</i>
+							<i style="background-color:#f07373">减</i>
+							<i style="background-color:#70bc46">首</i>
+							<i style="background-color:#f1884f">15</i>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<section class="mer-abso">
+					<div class="delta"></div>
+					<div class="delta-line"></div>
+					<div class="abso-text">
+						<div class="abso-content">
+							<h3>阿姨奶茶</h3>
+							<p><i style="background-color:#f4a937">专</i>该商家在线支付支持使用</p>
+							<p><i style="background-color:#f07373">减</i>在线支付满15立减4</p>
+							<p><i style="background-color:#70bc46">首</i>新用户下单立减10元</p>
+							<p><i style="background-color:#f1884f">15</i>跑男正能量套餐</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="clear"></div>	
 
 	</div>
 

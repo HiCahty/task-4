@@ -1,6 +1,8 @@
 window.onload=function(){
 	addLoadEvent(erweima());
 	addLoadEvent(searchbox());
+	addLoadEvent(menufixed());
+    addLoadEvent(chooseList());
 }
 
 
@@ -41,11 +43,230 @@ function erweima(){
 	}
 }
 
-//右侧导航条显示与隐藏
-function iconexplain(){
-	var $iconex=$('.icon-explain');
+//下拉菜单的显示与隐藏
+function chooseList(){
+    var choose1=document.getElementById("choose1");
+    var choose2=document.getElementById("choose2");
+    var Mchoose1=document.getElementById("Mchoose1");
+    var Mchoose2=document.getElementById("Mchoose2");
+    var MchoFrom1=document.getElementById("MchoFrom1");
+    var MchoFrom2=document.getElementById("MchoFrom2");
+    choose1.onmouseover=function(){
+        choFrom1.style.display="block";
+    }
+    choFrom1.onmouseout=function(){
+        choFrom1.style.display="none";
+    }
+    choose2.onmouseover=function(){
+        choFrom2.style.display="block";
+    }
+    choFrom2.onmouseout=function(){
+        choFrom2.style.display="none";
+    }
+    Mchoose1.onmouseover=function(){
+        MchoFrom1.style.display="block";
+    }
+    MchoFrom1.onmouseout=function(){
+        MchoFrom1.style.display="none";
+    }
+    Mchoose2.onmouseover=function(){
+        MchoFrom2.style.display="block";
+    }
+    MchoFrom2.onmouseout=function(){
+        MchoFrom2.style.display="none";
+    }
 }
 
+//导航条固定层效果及瀑布流
+function menufixed(){
+	var flag=1;
+	var Mscroll=document.getElementById('menuscroll');
+	window.onscroll=function(e){
+		e=e || window.event;
+		var osTop=document.documentElement.scrollTop||document.body.scrollTop;
+		console.log(osTop);
+		if(osTop>=299){
+			Mscroll.style.visibility="visible"
+		}
+		if(osTop<299){
+			Mscroll.style.visibility="hidden";
+		}
+
+		//瀑布流
+		var dataInt={
+			'data1':[{'src':'yinuo.png'},{'src':'aibike.png'},{'src':'qiqike.png'},{'src':'ayi.png'}],
+			'text1':[{'span':'10分钟'},{'span':'20分钟'},{'span':'30分钟'},{'span':'40分钟'}],
+			'text2':[{'h':'伊诺食客'},{'h':'艾比克'},{'h':'奇奇客'},{'h':'阿姨奶茶'}],
+			'text3':[{'span':'月售1314单'},{'span':'月售520单'},{'span':'月售0单'},{'span':'月售111单'}],
+			'text4':[{'span':'10元起送/免费配送'},{'span':'10元起送/免费配送'},{'span':'10元起送/免费配送'},{'span':'10元起送/免费配送'}],
+            'text5':[{'p':'该商家在线支付支持使用'},{'p':'该商家在线支付支持使用'},{'p':'该商家在线支付支持使用'},{'p':'该商家在线支付支持使用'}],
+            'text6':[{'p':'在线支付满15立减4'},{'p':'在线支付满15立减4'},{'p':'在线支付满15立减4'},{'p':'在线支付满15立减4'}],
+            'text7':[{'p':'新用户下单立减10元'},{'p':'新用户下单立减10元'},{'p':'新用户下单立减10元'},{'p':'新用户下单立减10元'}],
+            'text8':[{'p':'跑男正能量套餐'},{'p':'跑男正能量套餐'},{'p':'跑男正能量套餐'},{'p':'跑男正能量套餐'}],
+
+		};
+		if(checkscrollside()){
+            var oParent = document.getElementById('merwrap');
+            for(var i=0;i<dataInt.data1.length;i++){
+                var oMerchant=document.createElement('div'); 				/*图片*/
+                oMerchant.className='merchant';  //最外层merchant                 
+                oParent.appendChild(oMerchant);             
+                var oMerCon=document.createElement('div');
+                oMerCon.className='merchant-content';//有padding的一层
+                oMerchant.appendChild(oMerCon);
+                var oMerImg=document.createElement('div');
+                oMerImg.className='mer-image';//装图片的一层
+                oMerCon.appendChild(oMerImg);
+                var oImg=document.createElement('img');
+                oImg.src='images/merchant/'+dataInt.data1[i].src;
+                oMerImg.appendChild(oImg);
+
+                var oImgSpan=document.createElement('span');						/*图片下的文字*/
+                oImgSpan.innerHTML=dataInt.text1[i].span;
+                oMerImg.appendChild(oImgSpan);
+
+
+                                                                              
+                var oMerText=document.createElement('div');           		/*标题*/
+                oMerText.className='merchant-text';//有文字的一层
+                oMerCon.appendChild(oMerText);
+                var oMerh=document.createElement('h3');           	
+                oMerh.innerHTML=dataInt.text2[i].h;
+                oMerText.appendChild(oMerh);
+
+                var oMerStar=document.createElement('div');          		/*评分*/      	
+                oMerStar.className='icon-star';
+                oMerText.appendChild(oMerStar);  
+                var oMerI0=document.createElement('i');
+                var oMerI1=document.createElement('i');
+                var oMerI2=document.createElement('i');
+                var oMerI3=document.createElement('i');
+                var oMerI4=document.createElement('i');
+                oMerI0.className='fa fa-star'; 
+                oMerI1.className='fa fa-star'; 
+                oMerI2.className='fa fa-star'; 
+                oMerI3.className='fa fa-star';
+                oMerI4.className='fa fa-star'; 
+                oMerStar.appendChild(oMerI0);
+                oMerStar.appendChild(oMerI1);
+                oMerStar.appendChild(oMerI2);
+                oMerStar.appendChild(oMerI3);
+                oMerStar.appendChild(oMerI4);
+                var oMerStarOn=document.createElement('div');          	    	
+                oMerStarOn.className='icon-star-on';
+                oMerStar.appendChild(oMerStarOn);  
+                var oMerI00=document.createElement('i');
+                var oMerI11=document.createElement('i');
+                var oMerI22=document.createElement('i');
+                var oMerI33=document.createElement('i');
+                var oMerI34=document.createElement('i');
+                oMerI00.className='fa fa-star'; 
+                oMerI11.className='fa fa-star'; 
+                oMerI22.className='fa fa-star'; 
+                oMerI33.className='fa fa-star';
+                oMerI34.className='fa fa-star-half'; 
+                oMerStarOn.appendChild(oMerI00);
+                oMerStarOn.appendChild(oMerI11);
+                oMerStarOn.appendChild(oMerI22);
+                oMerStarOn.appendChild(oMerI33);
+                oMerStarOn.appendChild(oMerI34);  
+
+                var oMerSpan1=document.createElement('span');          		/*小字*/      	
+                oMerSpan1.className='merchant-ab';
+                oMerSpan1.innerHTML=dataInt.text3[i].span;
+                oMerText.appendChild(oMerSpan1);
+                var oMerSpan2=document.createElement('span');          		   	
+                oMerSpan2.innerHTML=dataInt.text4[i].span;
+                oMerText.appendChild(oMerSpan2);
+
+               	var oMerSquare=document.createElement('div');          		/*方形小图标*/      	
+                oMerSquare.className='icon-square';
+                oMerText.appendChild(oMerSquare);
+                var oMerISq0=document.createElement('i');  
+                var oMerISq1=document.createElement('i');
+                var oMerISq2=document.createElement('i');
+                var oMerISq3=document.createElement('i');
+                oMerISq0.innerHTML="专";
+                oMerISq1.innerHTML="减";
+                oMerISq2.innerHTML="首";
+                oMerISq3.innerHTML="15";
+                oMerISq0.style.backgroundColor="#f4a937";
+                oMerISq1.style.backgroundColor="#f07373";
+                oMerISq2.style.backgroundColor="#70bc46";
+                oMerISq3.style.backgroundColor="#f1884f";
+               	oMerSquare.appendChild(oMerISq0);
+                oMerSquare.appendChild(oMerISq1);
+                oMerSquare.appendChild(oMerISq2);
+                oMerSquare.appendChild(oMerISq3);
+
+                var oMerabso=document.createElement('section');               /*绝对定位框*/       
+                oMerabso.className='mer-abso';
+                oMerchant.appendChild(oMerabso);
+                var oMerdelta=document.createElement('div');               
+                oMerdelta.className='delta';
+                oMerabso.appendChild(oMerdelta);
+                var oMerdeltaL=document.createElement('div');               
+                oMerdeltaL.className='delta-line';
+                oMerabso.appendChild(oMerdeltaL);
+                var oMerabText=document.createElement('div');               
+                oMerabText.className='abso-text';
+                oMerabso.appendChild(oMerabText);
+                var oMerabCon=document.createElement('div');               
+                oMerabCon.className='abso-content';
+                oMerabText.appendChild(oMerabCon);
+                var oMerabH=document.createElement('h3');               
+                oMerabH.innerHTML=dataInt.text2[i].h;
+                oMerabCon.appendChild(oMerabH);
+                var oMerabI0=document.createElement('i');  
+                var oMerabI1=document.createElement('i');
+                var oMerabI2=document.createElement('i');
+                var oMerabI3=document.createElement('i');
+                oMerabI0.innerHTML="专";
+                oMerabI1.innerHTML="减";
+                oMerabI2.innerHTML="首";
+                oMerabI3.innerHTML="15";
+                oMerabI0.style.backgroundColor="#f4a937";
+                oMerabI1.style.backgroundColor="#f07373";
+                oMerabI2.style.backgroundColor="#70bc46";
+                oMerabI3.style.backgroundColor="#f1884f";
+                var oMerabP1=document.createElement('p'); 
+                oMerabP1.appendChild(oMerabI0);        
+                oMerabCon.appendChild(oMerabP1);
+                var oMerabP2=document.createElement('p');
+                oMerabP2.appendChild(oMerabI1);               
+                oMerabCon.appendChild(oMerabP2);
+                var oMerabP3=document.createElement('p');
+                oMerabP3.appendChild(oMerabI2);                    
+                oMerabCon.appendChild(oMerabP3);
+                var oMerabP4=document.createElement('p');  
+                oMerabP4.appendChild(oMerabI3);                 
+                oMerabCon.appendChild(oMerabP4);
+                var textP1 = document.createTextNode(dataInt.text5[i].p);
+                var textP2 = document.createTextNode(dataInt.text6[i].p);
+                var textP3 = document.createTextNode(dataInt.text7[i].p);
+                var textP4 = document.createTextNode(dataInt.text8[i].p);
+                oMerabP1.appendChild(textP1);
+                oMerabP2.appendChild(textP2);
+                oMerabP3.appendChild(textP3);
+                oMerabP4.appendChild(textP4);
+            }
+            var clear=document.createElement('div');
+            clear.className='clear';
+            oParent.appendChild(clear); 
+ 
+        }
+	}
+
+}
+//判断是否加载
+function checkscrollside(){
+    var oParent=document.getElementById('merwrap');
+    var amerchant=Else.getClassObj(oParent,'merchant');
+    var lastPinH=amerchant[amerchant.length-4].offsetTop+Math.floor(amerchant[amerchant.length-1].offsetHeight/2);//创建【触发添加块框函数waterfall()】的高度：最后一个块框的距离网页顶部+自身高的一半(实现未滚到底就开始加载)
+    var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+    var documentH=document.documentElement.clientHeight;
+    return (lastPinH<scrollTop+documentH)?true:false;//到达指定高度后 返回true，触发waterfall()函数
+}
 
 
 
@@ -60,4 +281,24 @@ function searchbox(){
 	}
 }
 
+//更改商品内容绝对定位的位置
+// function changeabuso(){
+// 	$merchant=$('.merchant');
+// 	var length=$('.merchant').length;
+// 	for(var i=0;i<length;i++){
+// 		var j=3*i;
+// 		var ableft=$('merchant[j]').getElementsByTagName('section');
+// 		ableft.style.right=0;
+// 	}
+// }
 
+// function changeabuso(){
+// 	var merwrap=document.getElementById('merwrap');
+// 	var merchant=new Array();
+// 	merchant=Else.getClassObj(merwrap,merchant);
+// 	for(var i=1;i<merchant.length;i++){
+// 		var j=3*i;
+//  		merchant[j].getElementsByTagName('section')[0].style.left=0;
+//  	}
+
+// }
