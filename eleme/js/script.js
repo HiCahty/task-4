@@ -3,6 +3,7 @@ window.onload=function(){
 	addLoadEvent(searchbox());
 	addLoadEvent(menufixed());
     addLoadEvent(chooseList());
+    addLoadEvent(TopBack());
 }
 
 
@@ -81,16 +82,24 @@ function chooseList(){
 function menufixed(){
 	var flag=1;
 	var Mscroll=document.getElementById('menuscroll');
+    var topback=document.getElementById("topback");
 	window.onscroll=function(e){
 		e=e || window.event;
 		var osTop=document.documentElement.scrollTop||document.body.scrollTop;
 		console.log(osTop);
 		if(osTop>=299){
-			Mscroll.style.visibility="visible"
+			Mscroll.style.visibility="visible";
 		}
-		if(osTop<299){
+		else{
 			Mscroll.style.visibility="hidden";
 		}
+
+        //回到顶部效果的显示和隐藏
+        if(osTop>500){
+            topback.style.display="block";
+        }else{
+            topback.style.display="none";
+        }
 
 		//瀑布流
 		var dataInt={
@@ -279,6 +288,22 @@ function searchbox(){
 	searinput.onblur=function(){
 		Move.animove(searinput,{width:200});
 	}
+}
+
+//回到顶部效果
+function TopBack(){
+    var topback=document.getElementById("topback");
+
+    topback.onclick=function(){
+        var timer=setInterval(function(){
+            var osTop=document.documentElement.scrollTop||document.body.scrollTop;
+            var ispeed=Math.floor(-osTop/6);
+            document.documentElement.scrollTop=document.body.scrollTop=osTop+ispeed;
+            if(osTop==0){
+                clearInterval(timer);
+            }
+        },20)
+    }
 }
 
 //更改商品内容绝对定位的位置

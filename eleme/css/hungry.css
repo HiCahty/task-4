@@ -54,7 +54,7 @@ a {
   font-weight: bold; }
   .menu-right a {
     position: relative;
-    color: #FFF;
+    color: #ccc;
     display: block;
     width: 100%;
     height: auto;
@@ -144,12 +144,27 @@ a {
           top: 130px;
           transform: rotate(90deg);
           border-bottom-color: #fff; }
+    .menu-right .menu-right-bottom .topback {
+      display: none;
+      padding-left: 7px; }
+      .menu-right .menu-right-bottom .topback img {
+        width: 20px;
+        height: 20px; }
     .menu-right .menu-right-bottom .line {
       margin-left: 10px;
       height: 0;
       width: 14px;
       border-top: 1px solid #fff; }
 
+@media screen and (max-height: 550px) and (min-height: 500px) {
+  .menu-right-bottom .qrcode {
+    display: none; } }
+@media screen and (max-height: 499px) and (min-height: 329px) {
+  .line, .menu-right-bottom .qrcode, .menu-right-bottom .kefu, .menu-right-top .dingdan, .menu-right-top .xinxi, .menu-right-top .lishi {
+    display: none; } }
+@media screen and (max-height: 330px) {
+  .line, .menu-right-top .gouwuche, .menu-right-bottom .qrcode, .menu-right-bottom .kefu, .menu-right-top .dingdan, .menu-right-top .xinxi, .menu-right-top .lishi {
+    display: none; } }
 .menu-head {
   width: 100%;
   background-color: #1e89e0; }
@@ -305,6 +320,7 @@ a {
     .menu-scroll .check4 label {
       margin: 0 3px 0 3px; }
   .menu-scroll .search {
+    background-color: #fff;
     margin-right: 2px;
     margin-top: 5px;
     border: 1px solid #ccc;
