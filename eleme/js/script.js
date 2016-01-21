@@ -4,6 +4,7 @@ window.onload=function(){
 	addLoadEvent(menufixed());
     addLoadEvent(chooseList());
     addLoadEvent(TopBack());
+    // addLoadEvent(changeabuso());
 }
 
 
@@ -112,6 +113,13 @@ function menufixed(){
             'text6':[{'p':'在线支付满15立减4'},{'p':'在线支付满15立减4'},{'p':'在线支付满15立减4'},{'p':'在线支付满15立减4'}],
             'text7':[{'p':'新用户下单立减10元'},{'p':'新用户下单立减10元'},{'p':'新用户下单立减10元'},{'p':'新用户下单立减10元'}],
             'text8':[{'p':'跑男正能量套餐'},{'p':'跑男正能量套餐'},{'p':'跑男正能量套餐'},{'p':'跑男正能量套餐'}],
+            'text9':[{'span':'十元起送'},{'span':'二十元起送'},{'span':'五元起送'},{'span':'十元起送'}],
+            'text10':[{'span':'免费配送'},{'span':'免费配送'},{'span':'免费配送'},{'span':'免费配送'}],
+            'text11':[{'span':'平均22分钟到达'},{'span':'平均20分钟到达'},{'span':'平均12分钟到达'},{'span':'平均19分钟到达'}],
+            'text12':[{'p':'为了避免高峰期配送问题，请个各位上帝提前下单，提高我们的配送效率，尽快将美味可口的饭菜送到您的嘴边，让您一天有个美好的心情。小区要求送上楼的另收5元上楼服务费'},
+            {'p':'为了避免高峰期配送问题，请个各位上帝提前下单，提高我们的配送效率，尽快将美味可口的饭菜送到您的嘴边，让您一天有个美好的心情。小区要求送上楼的另收5元上楼服务费'},
+            {'p':'为了避免高峰期配送问题，请个各位上帝提前下单，提高我们的配送效率，尽快将美味可口的饭菜送到您的嘴边，让您一天有个美好的心情。小区要求送上楼的另收5元上楼服务费'},
+            {'p':'为了避免高峰期配送问题，请个各位上帝提前下单，提高我们的配送效率，尽快将美味可口的饭菜送到您的嘴边，让您一天有个美好的心情。小区要求送上楼的另收5元上楼服务费'}],
 
 		};
 		if(checkscrollside()){
@@ -258,11 +266,40 @@ function menufixed(){
                 oMerabP2.appendChild(textP2);
                 oMerabP3.appendChild(textP3);
                 oMerabP4.appendChild(textP4);
+
+                var oMergrey=document.createElement('div');             /*greybox内容*/
+                oMergrey.className="greybox";
+                var greySP1=document.createElement('span');
+                greySP1.innerHTML=dataInt.text9[i].span;
+                oMergrey.appendChild(greySP1);
+                var greySP2=document.createElement('span');
+                greySP2.innerHTML=dataInt.text10[i].span;
+                greySP2.className='greyborder';
+                oMergrey.appendChild(greySP2);
+                var greySP3=document.createElement('span');
+                greySP3.innerHTML=dataInt.text11[i].span;
+                oMergrey.appendChild(greySP3);
+
+                var parag=document.createElement('p');                 /*长段落内容*/
+                parag.innerHTML=dataInt.text12[i].p;
+                oMergrey.appendChild(parag);
+                oMerabCon.appendChild(oMergrey);
+                oMerabCon.appendChild(parag);
+
             }
+            //为最右边的商家改变绝对定位块位置
+            if(i==4){
+                oMerabso.style.left=-265+'px';
+                var deltaL=oMerabso.getElementsByTagName('div')[0];
+                deltaL.style.left=261+'px';
+                deltaL.style.borderColor="#fff";
+                var deltalineL=oMerabso.getElementsByTagName('div')[1];
+                deltalineL.style.transform="rotate(135deg)";
+                deltalineL.style.left=258+'px';
+            } 
             var clear=document.createElement('div');
             clear.className='clear';
             oParent.appendChild(clear); 
- 
         }
 	}
 
@@ -271,7 +308,7 @@ function menufixed(){
 function checkscrollside(){
     var oParent=document.getElementById('merwrap');
     var amerchant=Else.getClassObj(oParent,'merchant');
-    var lastPinH=amerchant[amerchant.length-4].offsetTop+Math.floor(amerchant[amerchant.length-1].offsetHeight/2);//创建【触发添加块框函数waterfall()】的高度：最后一个块框的距离网页顶部+自身高的一半(实现未滚到底就开始加载)
+    var lastPinH=amerchant[amerchant.length-1].offsetTop+Math.floor(amerchant[amerchant.length-1].offsetHeight/2);//创建【触发添加块框函数waterfall()】的高度：最后一个块框的距离网页顶部+自身高的一半(实现未滚到底就开始加载)
     var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
     var documentH=document.documentElement.clientHeight;
     return (lastPinH<scrollTop+documentH)?true:false;//到达指定高度后 返回true，触发waterfall()函数
@@ -305,25 +342,15 @@ function TopBack(){
         },20)
     }
 }
-
+  
 //更改商品内容绝对定位的位置
-// function changeabuso(){
-// 	$merchant=$('.merchant');
-// 	var length=$('.merchant').length;
-// 	for(var i=0;i<length;i++){
-// 		var j=3*i;
-// 		var ableft=$('merchant[j]').getElementsByTagName('section');
-// 		ableft.style.right=0;
-// 	}
-// }
 
-// function changeabuso(){
-// 	var merwrap=document.getElementById('merwrap');
-// 	var merchant=new Array();
-// 	merchant=Else.getClassObj(merwrap,merchant);
-// 	for(var i=1;i<merchant.length;i++){
-// 		var j=3*i;
-//  		merchant[j].getElementsByTagName('section')[0].style.left=0;
-//  	}
+function changeabuso(){
+	var merwrap=document.getElementById('merwrap');
+     var merchantR=Else.getClassObj(merwrap,'merchant');
+	for(var i=0;i<12;i++){
+		var j=4*i;
+ 		merchantR[j-1].getElementsByTagName('section')[0].style.left=-265+'px';
+ 	}
 
-// }
+}

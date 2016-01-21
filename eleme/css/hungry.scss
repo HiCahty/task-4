@@ -684,58 +684,90 @@ $wrapper-width:80%;
    					}
    				}
    			}
-   		}
-   		.mer-abso{
-   			display: none;
-   			z-index: 2;
-   			background-color: #fff;
-   			position: absolute;
-			right: -265px;
-			top: 0;
-			.delta{
-				transform:rotate(-90deg);
-				position: absolute;
-				left: -11px;
-				top: 30px;
-				border-bottom-color: #fff;
-			}
-			.delta-line{
-				position: absolute;
-				left: -7px;
-				top: 30px;
-			}
-			.abso-text{
-				width: 261px;
-				border: 1px solid #e6e6e6;
-				.abso-content{
-					padding: 10px;
-					h3{
-						display: block;
-						border-bottom: 1px solid #e6e6e6;
-						padding-bottom: 15px;
-						padding-top: 8px;
-					}
-					p{
-						font-size: 14px;
-						line-height: 18px;
-						display: block;
-						margin-bottom: 10px;
-					}
-					i{
-						display: inline-block;
-						color: #fff;
-						font-weight: 700;
-						font-style:normal;
-   						font-size: 12px;
-   						margin-right: 3px;
-   						line-height: 16px;
-   						text-align: center;
-   						width: 18px;
-   						border-radius:2px;
-   					}
+   			.mer-abso{
+   				display: none;
+   				z-index: 2;
+   				background-color: #fff;
+   				position: absolute;
+				right: -265px;
+				top: 0;
+				width: 270px;
+				.delta{
+					transform:rotate(-90deg);
+					position: absolute;
+					left: -11px;
+					top: 30px;
+					border-bottom-color: #fff;
 				}
-			}
-   		}
+				.delta-line{
+					position: absolute;
+					left: -7px;
+					top: 30px;
+				}
+				.abso-text{
+					width: 261px;
+					border: 1px solid #e6e6e6;
+					.abso-content{
+						padding: 10px;
+						h3{
+							display: block;
+							border-bottom: 1px solid #e6e6e6;
+							padding-bottom: 15px;
+							padding-top: 8px;
+						}	
+						p{
+							color: #666;
+							font-size: 12px;
+							line-height: 18px;
+							display: block;
+							margin-bottom: 10px;
+						}
+						i{
+							display: inline-block;
+							color: #fff;
+							font-weight: 700;
+							font-style:normal;
+   							font-size: 12px;
+   							margin-right: 3px;
+   							line-height: 16px;
+   							text-align: center;
+   							width: 18px;
+   							border-radius:2px;
+   						}
+   						.greybox{
+							background-color: #F2F2F2;
+							padding: 1px 10px;
+							margin-bottom: 20px;	
+   							span{
+   								display: inline-block;
+   								font-size: 12px;
+   								padding: 0 4px;
+   							}
+   							.greyborder{
+   								border-left: 1px solid #e6e6e6;
+   								border-right: 1px solid #e6e6e6;	
+   							}
+   						}
+   						.parag{
+   							display: block;
+   							line-height: 22px;
+   						}
+					}
+				}
+   			}
+   			#abLeft1,#abLeft2,#abLeft3{
+				left: -256px!important;
+				.delta{
+					left: 251px;
+					border-color: #fff;
+				}
+				.delta-line{
+					left: 258px;
+					top: 30px;
+					transform:rotate(135deg);
+				}
+   			}
+   		}//merchant
 	}
 }
 

@@ -563,49 +563,74 @@ a {
               text-align: center;
               width: 18px;
               border-radius: 2px; }
-    .wrapper .merchant-wrapper .mer-abso {
-      display: none;
-      z-index: 2;
-      background-color: #fff;
-      position: absolute;
-      right: -265px;
-      top: 0; }
-      .wrapper .merchant-wrapper .mer-abso .delta {
-        transform: rotate(-90deg);
+      .wrapper .merchant-wrapper .merchant .mer-abso {
+        display: none;
+        z-index: 2;
+        background-color: #fff;
         position: absolute;
-        left: -11px;
-        top: 30px;
-        border-bottom-color: #fff; }
-      .wrapper .merchant-wrapper .mer-abso .delta-line {
-        position: absolute;
-        left: -7px;
-        top: 30px; }
-      .wrapper .merchant-wrapper .mer-abso .abso-text {
-        width: 261px;
-        border: 1px solid #e6e6e6; }
-        .wrapper .merchant-wrapper .mer-abso .abso-text .abso-content {
-          padding: 10px; }
-          .wrapper .merchant-wrapper .mer-abso .abso-text .abso-content h3 {
-            display: block;
-            border-bottom: 1px solid #e6e6e6;
-            padding-bottom: 15px;
-            padding-top: 8px; }
-          .wrapper .merchant-wrapper .mer-abso .abso-text .abso-content p {
-            font-size: 14px;
-            line-height: 18px;
-            display: block;
-            margin-bottom: 10px; }
-          .wrapper .merchant-wrapper .mer-abso .abso-text .abso-content i {
-            display: inline-block;
-            color: #fff;
-            font-weight: 700;
-            font-style: normal;
-            font-size: 12px;
-            margin-right: 3px;
-            line-height: 16px;
-            text-align: center;
-            width: 18px;
-            border-radius: 2px; }
+        right: -265px;
+        top: 0;
+        width: 270px; }
+        .wrapper .merchant-wrapper .merchant .mer-abso .delta {
+          transform: rotate(-90deg);
+          position: absolute;
+          left: -11px;
+          top: 30px;
+          border-bottom-color: #fff; }
+        .wrapper .merchant-wrapper .merchant .mer-abso .delta-line {
+          position: absolute;
+          left: -7px;
+          top: 30px; }
+        .wrapper .merchant-wrapper .merchant .mer-abso .abso-text {
+          width: 261px;
+          border: 1px solid #e6e6e6; }
+          .wrapper .merchant-wrapper .merchant .mer-abso .abso-text .abso-content {
+            padding: 10px; }
+            .wrapper .merchant-wrapper .merchant .mer-abso .abso-text .abso-content h3 {
+              display: block;
+              border-bottom: 1px solid #e6e6e6;
+              padding-bottom: 15px;
+              padding-top: 8px; }
+            .wrapper .merchant-wrapper .merchant .mer-abso .abso-text .abso-content p {
+              color: #666;
+              font-size: 12px;
+              line-height: 18px;
+              display: block;
+              margin-bottom: 10px; }
+            .wrapper .merchant-wrapper .merchant .mer-abso .abso-text .abso-content i {
+              display: inline-block;
+              color: #fff;
+              font-weight: 700;
+              font-style: normal;
+              font-size: 12px;
+              margin-right: 3px;
+              line-height: 16px;
+              text-align: center;
+              width: 18px;
+              border-radius: 2px; }
+            .wrapper .merchant-wrapper .merchant .mer-abso .abso-text .abso-content .greybox {
+              background-color: #F2F2F2;
+              padding: 1px 10px;
+              margin-bottom: 20px; }
+              .wrapper .merchant-wrapper .merchant .mer-abso .abso-text .abso-content .greybox span {
+                display: inline-block;
+                font-size: 12px;
+                padding: 0 4px; }
+              .wrapper .merchant-wrapper .merchant .mer-abso .abso-text .abso-content .greybox .greyborder {
+                border-left: 1px solid #e6e6e6;
+                border-right: 1px solid #e6e6e6; }
+            .wrapper .merchant-wrapper .merchant .mer-abso .abso-text .abso-content .parag {
+              display: block;
+              line-height: 22px; }
+      .wrapper .merchant-wrapper .merchant #abLeft1, .wrapper .merchant-wrapper .merchant #abLeft2, .wrapper .merchant-wrapper .merchant #abLeft3 {
+        left: -256px !important; }
+        .wrapper .merchant-wrapper .merchant #abLeft1 .delta, .wrapper .merchant-wrapper .merchant #abLeft2 .delta, .wrapper .merchant-wrapper .merchant #abLeft3 .delta {
+          left: 251px;
+          border-color: #fff; }
+        .wrapper .merchant-wrapper .merchant #abLeft1 .delta-line, .wrapper .merchant-wrapper .merchant #abLeft2 .delta-line, .wrapper .merchant-wrapper .merchant #abLeft3 .delta-line {
+          left: 258px;
+          top: 30px;
+          transform: rotate(135deg); }
 
 .foot {
   overflow: hidden;
