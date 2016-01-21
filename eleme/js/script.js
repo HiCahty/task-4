@@ -4,7 +4,7 @@ window.onload=function(){
 	addLoadEvent(menufixed());
     addLoadEvent(chooseList());
     addLoadEvent(TopBack());
-    // addLoadEvent(changeabuso());
+
 }
 
 
@@ -343,14 +343,4 @@ function TopBack(){
     }
 }
   
-//更改商品内容绝对定位的位置
 
-function changeabuso(){
-	var merwrap=document.getElementById('merwrap');
-     var merchantR=Else.getClassObj(merwrap,'merchant');
-	for(var i=0;i<12;i++){
-		var j=4*i;
- 		merchantR[j-1].getElementsByTagName('section')[0].style.left=-265+'px';
- 	}
-
-}

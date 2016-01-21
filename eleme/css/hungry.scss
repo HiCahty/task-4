@@ -503,10 +503,18 @@ $wrapper-width:80%;
 				display: inline-block;
 				li{
 					float: left;
-					padding: 5px 10px 5px 10px;
+					padding: 3px 10px;
 					margin: 0 6px 0 6px;
 					a{
 						color: #666;
+					}
+				}
+				.li-backgcolor{
+					display: inline-block;
+					background-color: #0089dc;
+					border-radius: 3px;
+					a{
+						color: #fff;
 					}
 				}
 			}
